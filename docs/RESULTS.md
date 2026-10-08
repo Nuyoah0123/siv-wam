@@ -57,6 +57,20 @@ These are source-level checks executed in the server environment used to run the
 
 The test suite validates code paths and small synthetic examples. It does not replace a full GPU training run or a 50-task RoboTwin evaluation.
 
+## Visual evidence
+
+### Easy and Hard task process
+
+<p align="center">
+  <img src="../assets/figures/task_results_easy_hard.png" alt="Easy and Hard task process results" width="960">
+</p>
+
+### SIV Map generation
+
+<p align="center">
+  <img src="../assets/figures/siv_map_pipeline.png" alt="SIV map generation pipeline" width="960">
+</p>
+
 ## Interpretation
 
 The most important result is not only the average success rate. The intervention row drops sharply when SIV maps are shuffled, while the GT-Map Oracle remains higher than predicted-map variants. Together these numbers support two hypotheses recorded in the report:

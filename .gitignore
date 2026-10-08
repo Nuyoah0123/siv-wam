@@ -58,3 +58,5 @@ assets/*
 !assets/results/
 !assets/results/*.png
 !assets/
+!assets/figures/
+!assets/figures/*.png
