@@ -1,0 +1,39 @@
+{
+  "backend": "robotwin",
+  "model": {
+    "config_name": "robotwin_b2",
+    "pretrained_path": "${SIV_WAM_PRETRAINED_PATH}",
+    "transformer_path": "${SIV_WAM_TRANSFORMER_PATH}",
+    "gpu": 0,
+    "world_steps": 25,
+    "action_steps": 20
+  },
+  "environment": {
+    "root": "${SIV_WAM_ROBOTWIN_ROOT}",
+    "task": "adjust_bottle",
+    "task_config": "demo_clean",
+    "instruction": "Adjust the bottle.",
+    "model_quaternion_order": "xyzw",
+    "environment_quaternion_order": "xyzw",
+    "relative_to_initial": true,
+    "reward_arm": "both"
+  },
+  "rl": {
+    "seed": 42,
+    "updates": 1000,
+    "group_size": 4,
+    "max_chunks": 20,
+    "epochs": 2,
+    "learning_rate": 0.00001,
+    "clip_epsilon": 0.2,
+    "kl_beta": 0.01,
+    "target_kl": 0.1,
+    "grad_clip": 1.0,
+    "discount": 0.99,
+    "dense_weight": 1.0,
+    "sparse_weight": 2.0,
+    "exploration_std": 0.05,
+    "min_std": 0.005,
+    "save_every": 10
+  }
+}

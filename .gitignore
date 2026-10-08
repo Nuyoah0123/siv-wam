@@ -1,0 +1,60 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments / local env files
+.env
+.env.*
+!.env.example
+.venv/
+.venv-*/
+venv/
+env/
+
+# Logs
+*.log
+*.out
+*.err
+
+# Local training / inference artifacts
+full_train_b2_output/
+train_out/
+joint_*_output/
+infer_*/
+eval_results/
+eval_server_logs/
+eval_server_vis/
+visualization/
+wandb/
+outputs/
+assets/
+data/
+external/
+build/
+dist/
+*.egg-info/
+
+# Model checkpoints / tensors / archives
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+
+# Keep lightweight public validation assets while ignoring large private assets.
+assets/*
+!assets/results/
+!assets/results/*.png
+!assets/

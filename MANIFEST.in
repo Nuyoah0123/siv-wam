@@ -1,0 +1,9 @@
+include README.md .env.example
+recursive-include requirements *.txt
+recursive-include scripts *.py *.sh
+recursive-include script *.sh
+recursive-include evaluation *.py *.sh
+recursive-include example *.png
+recursive-include siv_wam *.md
+recursive-include configs *.json
+recursive-include tests *.py

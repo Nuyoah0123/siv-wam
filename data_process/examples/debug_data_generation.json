@@ -1,0 +1,40 @@
+{
+  "name": "siv_wam_episode_debug",
+  "mode": "offline_proxy",
+  "task_dir": "${SIV_WAM_DATASET_PATH}/<task>",
+  "episode": 0,
+  "cams": [
+    "cam_high"
+  ],
+  "state_key": "action",
+  "outputs": {
+    "projection": "./outputs/debug_episode_000000/projection",
+    "raw_export": "./outputs/debug_episode_000000/raw_export",
+    "encoded_export": "./outputs/debug_episode_000000/encoded_export",
+    "logs": "./outputs/debug_episode_000000/logs"
+  },
+  "projection": {
+    "num_frames": 8
+  },
+  "siv": {
+    "contact_radius": 0.02,
+    "depth_tolerance": null,
+    "blend": "max",
+    "fixed_sigma": null
+  },
+  "runtime": {
+    "python": "python",
+    "robotwin_root": "${SIV_WAM_ROBOTWIN_ROOT}",
+    "lerobot_root": "${SIV_WAM_DATASET_PATH}",
+    "vae_path": "${SIV_WAM_VAE_PATH}",
+    "gpus": "0"
+  },
+  "checks": {
+    "expected_projection_width": 640,
+    "expected_projection_height": 480,
+    "expected_map_height": 256,
+    "expected_map_width": 320,
+    "min_projected_contacts": 1,
+    "require_wrist_projection": false
+  }
+}

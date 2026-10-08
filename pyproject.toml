@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "siv-wam"
+version = "0.2.0"
+description = "Spatial Interaction Value Guided World-Action Modeling training project"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+rl = ["torch", "numpy>=2,<2.3"]
+runtime = [
+  "torch", "torchvision", "diffusers", "transformers", "safetensors", "easydict",
+  "einops", "numpy>=2,<2.3", "scipy", "pillow", "opencv-python", "tqdm", "packaging",
+  "pyyaml", "wandb", "websockets", "msgpack", "matplotlib", "imageio",
+  "toppra", "transforms3d", "typing_extensions", "av"
+]
+
+[project.scripts]
+siv-wam = "siv_wam.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["siv_wam*"]
+
+[tool.setuptools.package-data]
+siv_wam = ["utils/Simple_Remote_Infer/*.md"]
