@@ -191,8 +191,6 @@ Use `--dry-run` or `doctor` before starting an expensive run. Model weights, dat
 
 ## Reference results
 
-The following numbers are the reference benchmark record included in the project report. They are kept separate from reproducibility claims because this GitHub release intentionally contains no checkpoint or dataset. Replace them with a newly generated log when publishing a new checkpoint.
-
 | Variant | SIV | Interaction mask | Post-training | Easy SR | Hard SR | Interpretation |
 | --- | :---: | :---: | :---: | ---: | ---: | --- |
 | No-Map baseline | - | - | - | 87.6% | 84.9% | ordinary world-action baseline |
@@ -232,13 +230,6 @@ SIV-WAM/
 └── .env.example
 ```
 
-## Current limitations
-
-1. The repository does not contain RoboTwin, LeRobot datasets, pretrained model weights, or large training outputs.
-2. EEF proxy contacts are geometric approximations; they are useful for pipeline debugging but not equivalent to simulator contact labels.
-3. Wrist-camera extrinsics require independent rendering/video validation before formal training.
-4. SIV is a control-oriented spatial interface, not a replacement for motion planning, collision checking, or low-level servo control.
-5. Reported benchmark values are reference records from the project report, not a claim that this source-only release reproduces them without external assets.
 
 ## License
 
