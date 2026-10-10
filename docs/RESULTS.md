@@ -59,12 +59,6 @@ The test suite validates code paths and small synthetic examples. It does not re
 
 ## Visual evidence
 
-### Easy and Hard task process
-
-<p align="center">
-  <img src="../assets/figures/task_results_easy_hard.png" alt="Easy and Hard task process results" width="960">
-</p>
-
 ### SIV Map generation
 
 <p align="center">
