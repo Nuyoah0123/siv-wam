@@ -44,16 +44,6 @@ The following image is a projection validation frame generated from the server-s
 
 ![SIV projection validation](assets/results/cam_high_f0081.png)
 
-## Model architecture
-
-The architecture separates future-world prediction, spatial interaction value estimation, and continuous action generation. The SIV stream is used as an explicit interface rather than leaving the action branch to rely only on dense future RGB features.
-
-<p align="center">
-  <img src="assets/figures/siv_wam_architecture.png" alt="SIV-WAM model architecture" width="960">
-</p>
-
-*Figure 1. World-Action Model compared with the SIV-WAM extension that predicts Future Value and routes it to Action.*
-
 ## SIV Map example
 
 The data-processing pipeline projects contact points from the robot/world coordinate system into the camera image, renders Gaussian value peaks, and overlays the resulting map on RGB.
