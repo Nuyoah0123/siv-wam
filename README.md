@@ -4,21 +4,6 @@
 
 SIV-WAM is a research codebase for a structured **world → spatial interaction value → action** interface in robot manipulation. Instead of decoding continuous actions directly from dense future RGB features, the model predicts Spatial Interaction Value (SIV) maps and uses them as a control-oriented spatial interface between future-world prediction and action generation.
 
-> This release is cleaned from the server-side source tree used to run the project. Datasets, pretrained weights, simulator installations, and training outputs are intentionally excluded from GitHub.
-
-## Project at a glance
-
-| Item | Description |
-| --- | --- |
-| Problem | Make future-world representations more useful for contact-rich robot control |
-| Representation | Dense, continuous SIV heatmaps aligned with future camera views |
-| Backbone | Wan-style video/world-action modeling code with multi-view inputs |
-| Action | Continuous dual-arm action chunks; default RoboTwin/LeRobot interface is 16D |
-| Training | Stage I joint world/value/action training; Stage II value-guided action post-training |
-| Data pipeline | Contact or EEF proxy → 3D-to-2D projection → Gaussian SIV map → optional VAE latent |
-| Evaluation | RoboTwin clients, geometry tests, SIV map metrics, and intervention ablations |
-| Primary environment | Linux, Python 3.10+, NVIDIA GPU, CUDA-compatible PyTorch |
-
 ## Why SIV maps?
 
 A future RGB latent must preserve appearance, texture, background, occlusion, and motion. A controller usually needs a smaller question: **where should the next meaningful interaction happen?** SIV maps make that spatial prior explicit and provide an inspectable interface for contact, placement, handover, pressing, and other stage-dependent behaviors.
