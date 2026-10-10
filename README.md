@@ -52,17 +52,8 @@ The data-processing pipeline projects contact points from the robot/world coordi
   <img src="assets/figures/siv_map_pipeline.png" alt="SIV map generation and overlay" width="960">
 </p>
 
-*Figure 2. Contact projection, SIV heatmap, RGB overlay, and per-frame diagnostics.*
+*Figure 1. Contact projection, SIV heatmap, RGB overlay, and per-frame diagnostics.*
 
-## Benchmark visual summary
-
-The Easy/Hard task-process figure below summarizes representative RoboTwin manipulation cases across the evaluation settings.
-
-<p align="center">
-  <img src="assets/figures/task_results_easy_hard.png" alt="Easy and Hard task process results" width="960">
-</p>
-
-*Figure 3. Representative task-process results for Easy and Hard settings.*
 
 ## What is included
 
